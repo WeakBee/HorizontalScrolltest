@@ -51,7 +51,7 @@ scrollhorizontal.to(sections,1, {
 },2).to("#shadowsection .sfase4",1, { 
   scale:1,
 },2).to("#shadowsection .scrollbar",1, { 
-  width:"20%"
+  width:"25%"
 },2);
 // SECTION1-3
 scrollhorizontal.to("#section1-3 .mask4",1, {
@@ -66,7 +66,7 @@ scrollhorizontal.to("#section1-3 .mask4",1, {
   opacity:0,
   x:"3vh",
 },3).to("#shadowsection .scrollbar",1, { 
-  width:"25%"
+  width:"30%"
 },3);
 
 scrollhorizontal.from("#section1-3 .animkanan",1, {
@@ -119,7 +119,7 @@ scrollhorizontal.to(sections,1, {
 },7).to("#shadowsection .sfase3",1, { 
   scale:1,
 },7).to("#shadowsection .scrollbar",1, { 
-  width:"40%"
+  width:"50%"
 },7);
 // SECTION1-4
 scrollhorizontal.to("#section1-4 .changetext5", 1, {
@@ -148,7 +148,7 @@ scrollhorizontal.to(sections,1, {
 },11).to("#shadowsection .sfase2",1, { 
   scale:1,
 },11).to("#shadowsection .scrollbar",1, { 
-  width:"60%"
+  width:"75%"
 },11);
 // SECTION2-1
 scrollhorizontal.from("#section2-1 .gambarsurat", 1, {
@@ -171,8 +171,6 @@ scrollhorizontal.to("#section2-1 .notif", 1, {
 scrollhorizontal.from("#section2-1 .foto-surat1", 1, {
   scale:0,
   transformOrigin:"top left",
-},15).to("#shadowsection .scrollbar",1, { 
-  width:"80%"
 },15);
 
 scrollhorizontal.to("#section2-1 .foto-surat1", 1, {

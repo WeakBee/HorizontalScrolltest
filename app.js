@@ -125,13 +125,12 @@ scrollhorizontal.to(sections,1, {
 scrollhorizontal.to("#section1-4 .changetext5", 1, {
   text: {
     value: "Oops, it appears that this schedule is already full",
-    ease: Linear.easeNone,
-  }
+  },
+  yoyo:1,
+  repeat:1,
 },8);
 
-scrollhorizontal.to("#section1-4 .changetext5", 1, {
-  text: { value: "", ease: Linear.easeNone },
-},9).to("#section1-4 .kalender", 1, { 
+scrollhorizontal.to("#section1-4 .kalender", 1, { 
   x: "-100vh" 
 },9);
 

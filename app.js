@@ -86,7 +86,7 @@ ScrollTrigger.create({
   markers:true,
   start: "20% center",
   end: "20% center",
-  // toggleActions: "play none none reverse"
+  toggleActions: "play none none reverse"
 });
 
 const sec_1_2 = gsap.timeline();
@@ -114,11 +114,12 @@ ScrollTrigger.create({
   animation: sec_1_2,
   trigger: "#section1-2",
   markers:true,
-  start: "90% center",
-  end: "90% center",
+  start: "70% center",
+  end: "70% center",
   onEnter: stopscroll,
-  onEnterBack: self => self.disable()
-  // toggleActions: "play none none reverse"
+  onLeaveBack: stopscroll,
+  // onEnterBack: self => self.disable(),
+  toggleActions: "play none none reverse"
 });
 
 const sec_2 = gsap.timeline();
@@ -159,7 +160,7 @@ ScrollTrigger.create({
   markers:true,
   start: "170% center",
   end: "170% center",
-  // toggleActions: "play none none reverse"
+  toggleActions: "play none none reverse"
 });
 
 const sec_2_2 = gsap.timeline();
@@ -192,11 +193,12 @@ ScrollTrigger.create({
   animation: sec_2_2,
   trigger: "#section1-2",
   markers:true,
-  start: "235% center",
-  end: "235% center",
-  // toggleActions: "play none none reverse",
+  start: "215% center",
+  end: "215% center",
+  toggleActions: "play none none reverse",
   onEnter: stopscroll,
-  onEnterBack: self => self.disable()
+  onLeaveBack: stopscroll,
+  // onEnterBack: self => self.disable()
 });
 
 const sec_3 = gsap.timeline();
@@ -216,7 +218,7 @@ ScrollTrigger.create({
   markers:true,
   start: "325% center",
   end: "325% center",
-  // toggleActions: "play none none reverse",
+  toggleActions: "play none none reverse",
   onEnter: stopscroll2,
 });
 
@@ -237,10 +239,93 @@ ScrollTrigger.create({
   animation: sec_3_2,
   trigger: "#section1-2",
   markers:true,
-  start: "350% center",
-  end: "350% center",
-  // toggleActions: "play none none reverse",
+  start: "340% center",
+  end: "340% center",
+  toggleActions: "play none none reverse",
   onEnter: stopscroll,
+  onLeaveBack: stopscroll,
+});
+
+const sec_4_1 = gsap.timeline();
+
+sec_4_1.fromTo("#section2-1 .notif", 1,{
+  scale:1,
+  transformOrigin:"top right",
+},{
+  scale:0,
+  transformOrigin:"top right",
+},0).fromTo("#section2-1 .foto-surat1", 1, {
+  scale:0,
+  transformOrigin:"top left",
+},{
+  scale:1,
+  transformOrigin:"top left",
+},1);
+
+ScrollTrigger.create({
+  animation: sec_4_1,
+  trigger: "#section1-2",
+  markers:true,
+  start: "480% center",
+  end: "480% center",
+  toggleActions: "play none none reverse",
+  onEnter: stopscroll,
+  onLeaveBack: stopscroll,
+});
+
+const sec_4 = gsap.timeline();
+
+sec_4.fromTo("#section2-1 .gambarsurat", 1, {
+  x:"100vh",
+  rotation:-13,
+},{
+  x:"0",
+  rotation:0,
+},0).fromTo("#section2-1 .notif", 1, {
+  scale:0,
+  transformOrigin:"top right",
+},{
+  scale:1,
+  transformOrigin:"top right",
+},1);
+
+
+ScrollTrigger.create({
+  animation: sec_4,
+  trigger: "#section1-2",
+  markers:true,
+  toggleActions: "play none none reverse",
+  start: "450% center",
+  end: "450% center",
+});
+
+const sec_4_2 = gsap.timeline();
+
+sec_4_2.fromTo("#section2-1 .foto-surat1", 1, {
+  x:0,
+  y:0,
+  rotation:0,
+},{
+  x:130,
+  y:-100,
+  rotation:10,
+},0).fromTo("#section2-1 .foto-surat2", 1, {
+  scale:0,
+  transformOrigin:"top left",
+},{
+  scale:1,
+  transformOrigin:"top left",
+},1);
+
+ScrollTrigger.create({
+  animation: sec_4_2,
+  trigger: "#section1-2",
+  markers:true,
+  start: "500% center",
+  end: "500% center",
+  toggleActions: "play none none reverse",
+  onEnter: stopscroll,
+  onLeaveBack: stopscroll,
 });
 
 var $toggle = 0;

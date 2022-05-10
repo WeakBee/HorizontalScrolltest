@@ -79,6 +79,7 @@ ScrollTrigger.create({
   markers:true,
   start: "20% center",
   end: "20% center",
+  toggleActions: "play none none reverse"
 });
 
 const sec_1_2 = gsap.timeline();
@@ -98,6 +99,7 @@ ScrollTrigger.create({
   markers:true,
   start: "70% center",
   end: "70% center",
+  toggleActions: "play none none reverse"
 });
 
 const sec_1_3 = gsap.timeline();
@@ -118,9 +120,10 @@ ScrollTrigger.create({
   animation: sec_1_3,
   trigger: "#section1-2",
   markers:true,
-  onEnter: stopscroll,
   start: "90% center",
   end: "90% center",
+  onEnter: stopscroll,
+  toggleActions: "play none none reverse"
 });
 
 const sec_2 = gsap.timeline();

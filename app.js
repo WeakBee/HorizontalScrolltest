@@ -59,17 +59,17 @@ function stopscroll2() {
 
 const sec_1 = gsap.timeline();
 
-sec_1.to("#section1-2 .mask4",1, {
+sec_1.to("#section1-2 .mask4",0.5, {
   scaleY: 0,
   transformOrigin: "top bottom"
 },0).to("#section1-2 .orang",1, {
   scale:1,
   duration:3,
-},0).from("#section1-2 .textanim",1, {
+},0).from("#section1-2 .textanim",0.5, {
   opacity:0,
   x:"7vh",
   lazy: false,
-},0).from("#section1-2 .qualification",1, {
+},0).from("#section1-2 .qualification",0.5, {
   opacity:0,
   x:"-10vh",
   stagger:0.1,
@@ -83,7 +83,7 @@ sec_1.to("#section1-2 .mask4",1, {
 ScrollTrigger.create({
   animation: sec_1,
   trigger: ".ccontainer",
-  markers:true,
+  // markers:true,
   start: "20% center",
   end: "20% center",
   toggleActions: "play none none reverse"
@@ -113,7 +113,7 @@ sec_1_2.to("#section1-2 .quaimg",1, {
 ScrollTrigger.create({
   animation: sec_1_2,
   trigger: "#section1-2",
-  markers:true,
+  // markers:true,
   start: "80% center",
   end: "80% center",
   onEnter: stopscroll,
@@ -157,7 +157,7 @@ sec_2.to("#section1-3 .mask4",1, {
 ScrollTrigger.create({
   animation: sec_2,
   trigger: "#section1-2",
-  markers:true,
+  // markers:true,
   start: "240% center",
   end: "240% center",
   toggleActions: "play none none reverse"
@@ -192,7 +192,7 @@ sec_2_2.fromTo("#section1-3 .animkanan",1, {
 ScrollTrigger.create({
   animation: sec_2_2,
   trigger: "#section1-2",
-  markers:true,
+  // markers:true,
   start: "320% center",
   end: "320% center",
   toggleActions: "play none none reverse",
@@ -215,7 +215,7 @@ sec_3.to("#section1-4 .changetext5", 1.5, {
 ScrollTrigger.create({
   animation: sec_3,
   trigger: "#section1-2",
-  markers:true,
+  // markers:true,
   start: "550% center",
   end: "550% center",
   toggleActions: "play none none reverse",
@@ -238,7 +238,7 @@ sec_3_2.to("#section1-4 .changetext5", 1.5, {
 ScrollTrigger.create({
   animation: sec_3_2,
   trigger: "#section1-2",
-  markers:true,
+  // markers:true,
   start: "600% center",
   end: "600% center",
   toggleActions: "play none none reverse",
@@ -265,12 +265,32 @@ sec_4_1.fromTo("#section2-1 .notif", 1,{
 ScrollTrigger.create({
   animation: sec_4_1,
   trigger: "#section1-2",
-  markers:true,
+  // markers:true,
   start: "800% center",
   end: "800% center",
   toggleActions: "play none none reverse",
   onEnter: stopscroll,
   onLeaveBack: stopscroll,
+});
+
+const sec_41 = gsap.timeline();
+
+sec_41.fromTo("#section2-1 .notif", 0.5, {
+  scale:0,
+  transformOrigin:"top right",
+},{
+  scale:1,
+  transformOrigin:"top right",
+},1);
+
+ScrollTrigger.create({
+  animation: sec_41,
+  trigger: "#section1-2",
+  // markers:true,
+  toggleActions: "play none none reverse",
+  start: "765% center",
+  end: "765% center",
+  onEnter: stopscroll,
 });
 
 const sec_4 = gsap.timeline();
@@ -281,19 +301,12 @@ sec_4.fromTo("#section2-1 .gambarsurat", 1, {
 },{
   x:"0",
   rotation:0,
-},0).fromTo("#section2-1 .notif", 1, {
-  scale:0,
-  transformOrigin:"top right",
-},{
-  scale:1,
-  transformOrigin:"top right",
-},1);
-
+},0);
 
 ScrollTrigger.create({
   animation: sec_4,
   trigger: "#section1-2",
-  markers:true,
+  // markers:true,
   toggleActions: "play none none reverse",
   start: "740% center",
   end: "740% center",
@@ -320,7 +333,7 @@ sec_4_2.fromTo("#section2-1 .foto-surat1", 1, {
 ScrollTrigger.create({
   animation: sec_4_2,
   trigger: "#section1-2",
-  markers:true,
+  // markers:true,
   start: "860% center",
   end: "860% center",
   toggleActions: "play none none reverse",

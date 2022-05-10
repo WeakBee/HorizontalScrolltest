@@ -40,7 +40,7 @@ ScrollTrigger.create({
   trigger: ".ccontainer",
   pin: true,
   scrub: 1,
-  end: () => "+=4000" 
+  end: () => "+=7000" 
 });
 
 function stopscroll() {
@@ -114,8 +114,8 @@ ScrollTrigger.create({
   animation: sec_1_2,
   trigger: "#section1-2",
   markers:true,
-  start: "70% center",
-  end: "70% center",
+  start: "80% center",
+  end: "80% center",
   onEnter: stopscroll,
   onLeaveBack: stopscroll,
   // onEnterBack: self => self.disable(),
@@ -158,8 +158,8 @@ ScrollTrigger.create({
   animation: sec_2,
   trigger: "#section1-2",
   markers:true,
-  start: "170% center",
-  end: "170% center",
+  start: "240% center",
+  end: "240% center",
   toggleActions: "play none none reverse"
 });
 
@@ -193,8 +193,8 @@ ScrollTrigger.create({
   animation: sec_2_2,
   trigger: "#section1-2",
   markers:true,
-  start: "215% center",
-  end: "215% center",
+  start: "320% center",
+  end: "320% center",
   toggleActions: "play none none reverse",
   onEnter: stopscroll,
   onLeaveBack: stopscroll,
@@ -216,8 +216,8 @@ ScrollTrigger.create({
   animation: sec_3,
   trigger: "#section1-2",
   markers:true,
-  start: "325% center",
-  end: "325% center",
+  start: "550% center",
+  end: "550% center",
   toggleActions: "play none none reverse",
   onEnter: stopscroll2,
 });
@@ -239,8 +239,8 @@ ScrollTrigger.create({
   animation: sec_3_2,
   trigger: "#section1-2",
   markers:true,
-  start: "340% center",
-  end: "340% center",
+  start: "600% center",
+  end: "600% center",
   toggleActions: "play none none reverse",
   onEnter: stopscroll,
   onLeaveBack: stopscroll,
@@ -266,8 +266,8 @@ ScrollTrigger.create({
   animation: sec_4_1,
   trigger: "#section1-2",
   markers:true,
-  start: "480% center",
-  end: "480% center",
+  start: "800% center",
+  end: "800% center",
   toggleActions: "play none none reverse",
   onEnter: stopscroll,
   onLeaveBack: stopscroll,
@@ -295,8 +295,8 @@ ScrollTrigger.create({
   trigger: "#section1-2",
   markers:true,
   toggleActions: "play none none reverse",
-  start: "450% center",
-  end: "450% center",
+  start: "740% center",
+  end: "740% center",
 });
 
 const sec_4_2 = gsap.timeline();
@@ -321,8 +321,8 @@ ScrollTrigger.create({
   animation: sec_4_2,
   trigger: "#section1-2",
   markers:true,
-  start: "500% center",
-  end: "500% center",
+  start: "860% center",
+  end: "860% center",
   toggleActions: "play none none reverse",
   onEnter: stopscroll,
   onLeaveBack: stopscroll,

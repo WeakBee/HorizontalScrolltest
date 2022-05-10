@@ -47,7 +47,7 @@ function stopscroll() {
   $('body').addClass('stop-scrolling')
   setTimeout(function() {
     $('body').removeClass('stop-scrolling');
-  }, 1500);
+  }, 2000);
 }
 
 const sec_1 = gsap.timeline();
@@ -79,7 +79,7 @@ ScrollTrigger.create({
   markers:true,
   start: "20% center",
   end: "20% center",
-  toggleActions: "play none none reverse"
+  // toggleActions: "play none none reverse"
 });
 
 const sec_1_2 = gsap.timeline();
@@ -91,39 +91,27 @@ sec_1_2.to("#section1-2 .quaimg",1, {
 },{
   opacity:0,
   x:"7vh",
-},0);
-
-ScrollTrigger.create({
-  animation: sec_1_2,
-  trigger: "#section1-2",
-  markers:true,
-  start: "70% center",
-  end: "70% center",
-  toggleActions: "play none none reverse"
-});
-
-const sec_1_3 = gsap.timeline();
-
-sec_1_3.fromTo("#section1-2 .quacheck",1.5, {
+},0).fromTo("#section1-2 .quacheck",1, {
   scale:0
 },{
   scale:1
-},0).fromTo("#section1-2 .textanim2",1.5, {
+},1).fromTo("#section1-2 .textanim2",1, {
   opacity:0,
   x:"7vh",
 },{
   opacity:1,
   x:"0",
-},0);
+},1);
 
 ScrollTrigger.create({
-  animation: sec_1_3,
+  animation: sec_1_2,
   trigger: "#section1-2",
   markers:true,
   start: "90% center",
   end: "90% center",
   onEnter: stopscroll,
-  toggleActions: "play none none reverse"
+  onEnterBack: self => self.disable()
+  // toggleActions: "play none none reverse"
 });
 
 const sec_2 = gsap.timeline();
@@ -164,6 +152,7 @@ ScrollTrigger.create({
   markers:true,
   start: "170% center",
   end: "170% center",
+  // toggleActions: "play none none reverse"
 });
 
 const sec_2_2 = gsap.timeline();
@@ -183,32 +172,24 @@ sec_2_2.fromTo("#section1-3 .animkanan",1, {
 },{
   opacity:0,
   x:"3vh",
-},0);
+},0).from("#section1-3 .animkanan_after",1, {
+  opacity:0,
+  x:"-13vh",
+  lazy: false,
+},1).from("#section1-3 .animkiri_after",1, {
+  opacity:0,
+  x:"10vh",
+  lazy: false,
+},1);
 ScrollTrigger.create({
   animation: sec_2_2,
   trigger: "#section1-2",
   markers:true,
-  start: "215% center",
-  end: "215% center",
-});
-
-const sec_2_3 = gsap.timeline();
-
-sec_2_3.from("#section1-3 .animkanan_after",1, {
-  opacity:0,
-  x:"-13vh",
-  lazy: false,
-},0).from("#section1-3 .animkiri_after",1, {
-  opacity:0,
-  x:"10vh",
-  lazy: false,
-},0);
-ScrollTrigger.create({
-  animation: sec_2_3,
-  trigger: "#section1-2",
-  markers:true,
   start: "235% center",
   end: "235% center",
+  // toggleActions: "play none none reverse",
+  onEnter: stopscroll,
+  onEnterBack: self => self.disable()
 });
 
 var $toggle = 0;

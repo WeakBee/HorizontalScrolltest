@@ -13,6 +13,11 @@ body {
   font-family: 'Inter', sans-serif;
 }
 
+.stop-scrolling {
+  height: 100%;
+  overflow: hidden;
+}
+
 .solusibtn {
   background-color: var(--warna4);
   border-radius: 12px;

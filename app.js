@@ -43,6 +43,13 @@ ScrollTrigger.create({
   end: () => "+=4000" 
 });
 
+function stopscroll() {
+  $('body').addClass('stop-scrolling')
+  setTimeout(function() {
+    $('body').removeClass('stop-scrolling');
+  }, 1500);
+}
+
 const sec_1 = gsap.timeline();
 
 sec_1.to("#section1-2 .mask4",1, {
@@ -60,9 +67,10 @@ sec_1.to("#section1-2 .mask4",1, {
   x:"-10vh",
   stagger:0.1,
   lazy: false,
-},0).from("#section1-2 .scrollToExplore",1, {
+},0).fromTo("#section1-2 .scrollToExplore",1, {
   opacity:0,
-  duration: 1,
+},{
+  opacity:1,
 },0);
 
 ScrollTrigger.create({
@@ -94,19 +102,25 @@ ScrollTrigger.create({
 
 const sec_1_3 = gsap.timeline();
 
-sec_1_3.from("#section1-2 .quacheck",1, {
+sec_1_3.fromTo("#section1-2 .quacheck",1.5, {
   scale:0
-},0).from("#section1-2 .textanim2",1, {
+},{
+  scale:1
+},0).fromTo("#section1-2 .textanim2",1.5, {
   opacity:0,
   x:"7vh",
+},{
+  opacity:1,
+  x:"0",
 },0);
 
 ScrollTrigger.create({
   animation: sec_1_3,
   trigger: "#section1-2",
   markers:true,
-  start: "80% center",
-  end: "80% center",
+  onEnter: stopscroll,
+  start: "90% center",
+  end: "90% center",
 });
 
 const sec_2 = gsap.timeline();
@@ -114,11 +128,12 @@ const sec_2 = gsap.timeline();
 sec_2.to("#section1-3 .mask4",1, {
   scaleY: 0,
   transformOrigin: "top bottom",
-  duration: 1,
-},0).from("#section1-3 .orang",1, {
+},0).fromTo("#section1-3 .orang",1, {
   scale: 0.85,
   transformOrigin: "center bottom",
-  duration: 1,
+},{
+  scale: 1,
+  transformOrigin: "center bottom",
 },0).from("#section1-3 .textanim",1, {
   opacity:0,
   x:"3vh",
@@ -191,53 +206,6 @@ ScrollTrigger.create({
   markers:true,
   start: "235% center",
   end: "235% center",
-});
-
-const sec_3 = gsap.timeline();
-
-const reverseTween = gsap.to("#section1-4 .changetext5", {
-  text: {
-    value: "Ups,ternyata jadwal interview saat ini sudah terisi penuh",
-  },
-  ease:"none"
-}).reverse(0);
-
-sec_3.to("#section1-4 .changetext5", {
-  text: {
-    value: "Ups,ternyata jadwal interview saat ini sudah terisi penuh",
-  },
-  ease:"none"
-});
-sec_3.add(reverseTween);
-sec_3.to("#section1-4 .changetext5", {
-  text: {
-    value: "",
-  },
-  ease:"none"
-});
-ScrollTrigger.create({
-  animation: sec_3,
-  trigger: "#section1-2",
-  markers:true,
-  start: "300% center",
-  end: "300% center",
-});
-
-const sec_3_2 = gsap.timeline();
-sec_3_2.to("#section1-4 .kalender",1, { 
-  x: "-100vh" 
-},1).to("#section1-4 .changetext5", 1, {
-  text: { value: "Jangan khawatir, EVA ada untuk membantu", ease: Linear.easeNone },
-},1).to("#section1-4 .instruction", 1, { 
-  opacity: 1 
-},1);
-
-ScrollTrigger.create({
-  animation: sec_3_2,
-  trigger: "#section1-2",
-  markers:true,
-  start: "340% center",
-  end: "340% center",
 });
 
 var $toggle = 0;

@@ -7,10 +7,25 @@ const scrollhorizontal = gsap.timeline();
 // SECTION1-2
 scrollhorizontal.to(sections,1, {
   xPercent: -0
+},0).to("#shadowsection .scrollbar",0.5, { 
+  width:"5%"
+},0).to("#shadowsection .sfase5",0.5, { 
+  scale:1,
+},0).to("#shadowsection .bubblescroll",0.5, { 
+  opacity:1,
 },0);
 scrollhorizontal.to(sections,1, {
   xPercent: -100
+},1).to("#shadowsection .sfase5",1, { 
+  scale:0,
+},1).to("#shadowsection .sfase4",1, { 
+  scale:1,
+},1).to("#shadowsection .scrollbar",1, { 
+  width:"25%"
+},1).to("#shadowsection .bubblescroll",1, { 
+  opacity:1,
 },1);
+
 // SECTION1-3
 
 // SECTION1-3
@@ -19,6 +34,14 @@ scrollhorizontal.to(sections,1, {
 },2);
 scrollhorizontal.to(sections,1, {
   xPercent: -200
+},3).to("#shadowsection .sfase4",1, { 
+  scale:0,
+},3).to("#shadowsection .sfase3",1, { 
+  scale:1,
+},3).to("#shadowsection .scrollbar",1, { 
+  width:"50%"
+},3).to("#shadowsection .bubblescroll",1, { 
+  opacity:1,
 },3);
 scrollhorizontal.to(sections,1, {
   xPercent: -200
@@ -27,6 +50,14 @@ scrollhorizontal.to(sections,1, {
 
 scrollhorizontal.to(sections,1, {
   xPercent: -300
+},5).to("#shadowsection .sfase3",1, { 
+  scale:0,
+},5).to("#shadowsection .sfase2",1, { 
+  scale:1,
+},5).to("#shadowsection .scrollbar",1, { 
+  width:"75%"
+},5).to("#shadowsection .bubblescroll",1, { 
+  opacity:1,
 },5);
 scrollhorizontal.to(sections,1, {
   xPercent: -300
@@ -40,7 +71,7 @@ ScrollTrigger.create({
   trigger: ".ccontainer",
   pin: true,
   scrub: 1,
-  end: () => "+=7000" 
+  end: () => "+=8000" 
 });
 
 function stopscroll() {
@@ -193,8 +224,8 @@ ScrollTrigger.create({
   animation: sec_2_2,
   trigger: "#section1-2",
   // markers:true,
-  start: "320% center",
-  end: "320% center",
+  start: "340% center",
+  end: "340% center",
   toggleActions: "play none none reverse",
   onEnter: stopscroll,
   onLeaveBack: stopscroll,
@@ -216,8 +247,8 @@ ScrollTrigger.create({
   animation: sec_3,
   trigger: "#section1-2",
   // markers:true,
-  start: "550% center",
-  end: "550% center",
+  start: "560% center",
+  end: "560% center",
   toggleActions: "play none none reverse",
   onEnter: stopscroll2,
 });
@@ -239,8 +270,8 @@ ScrollTrigger.create({
   animation: sec_3_2,
   trigger: "#section1-2",
   // markers:true,
-  start: "600% center",
-  end: "600% center",
+  start: "620% center",
+  end: "620% center",
   toggleActions: "play none none reverse",
   onEnter: stopscroll,
   onLeaveBack: stopscroll,
@@ -266,8 +297,8 @@ ScrollTrigger.create({
   animation: sec_4_1,
   trigger: "#section1-2",
   // markers:true,
-  start: "800% center",
-  end: "800% center",
+  start: "890% center",
+  end: "890% center",
   toggleActions: "play none none reverse",
   onEnter: stopscroll,
   onLeaveBack: stopscroll,
@@ -288,8 +319,8 @@ ScrollTrigger.create({
   trigger: "#section1-2",
   // markers:true,
   toggleActions: "play none none reverse",
-  start: "765% center",
-  end: "765% center",
+  start: "840% center",
+  end: "840% center",
   onEnter: stopscroll,
 });
 
@@ -308,8 +339,8 @@ ScrollTrigger.create({
   trigger: "#section1-2",
   // markers:true,
   toggleActions: "play none none reverse",
-  start: "740% center",
-  end: "740% center",
+  start: "800% center",
+  end: "800% center",
 });
 
 const sec_4_2 = gsap.timeline();
@@ -334,8 +365,8 @@ ScrollTrigger.create({
   animation: sec_4_2,
   trigger: "#section1-2",
   // markers:true,
-  start: "860% center",
-  end: "860% center",
+  start: "930% center",
+  end: "930% center",
   toggleActions: "play none none reverse",
   onEnter: stopscroll,
   onLeaveBack: stopscroll,

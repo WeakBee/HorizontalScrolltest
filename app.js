@@ -50,6 +50,13 @@ function stopscroll() {
   }, 2000);
 }
 
+function stopscroll2() {
+  $('body').addClass('stop-scrolling')
+  setTimeout(function() {
+    $('body').removeClass('stop-scrolling');
+  }, 3000);
+}
+
 const sec_1 = gsap.timeline();
 
 sec_1.to("#section1-2 .mask4",1, {
@@ -190,6 +197,50 @@ ScrollTrigger.create({
   // toggleActions: "play none none reverse",
   onEnter: stopscroll,
   onEnterBack: self => self.disable()
+});
+
+const sec_3 = gsap.timeline();
+
+sec_3.to("#section1-4 .changetext5", 1.5, {
+  text: {
+    value: "Ups,ternyata jadwal interview saat ini sudah terisi penuh",
+    ease: Linear.easeNone,
+  },
+  yoyo: true,
+  repeat:1
+},0);
+
+ScrollTrigger.create({
+  animation: sec_3,
+  trigger: "#section1-2",
+  markers:true,
+  start: "325% center",
+  end: "325% center",
+  // toggleActions: "play none none reverse",
+  onEnter: stopscroll2,
+});
+
+const sec_3_2 = gsap.timeline();
+
+sec_3_2.to("#section1-4 .changetext5", 1.5, {
+  text: {
+    value: "Jangan khawatir, EVA ada untuk membantu",
+    ease: Linear.easeNone,
+  },
+},0).to("#section1-4 .kalender", 1.5, { 
+  x: "-100vh" 
+},0).to("#section1-4 .instruction", 1, { 
+  opacity: 1 
+},1);
+
+ScrollTrigger.create({
+  animation: sec_3_2,
+  trigger: "#section1-2",
+  markers:true,
+  start: "350% center",
+  end: "350% center",
+  // toggleActions: "play none none reverse",
+  onEnter: stopscroll,
 });
 
 var $toggle = 0;

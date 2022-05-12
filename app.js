@@ -79,7 +79,21 @@ sec_1.to("#section1-2 .mask4",0.5, {
   opacity:0,
 },{
   opacity:1,
-},0);
+},0).fromTo("#shadowsection .scrollbar",1,{
+  width:"0",
+}, { 
+  width:"5%"
+},0).to("#shadowsection .sfase4",1, { 
+  scale:0,
+},0).fromTo("#shadowsection .sfase5",1,{
+  scale:0,
+} ,{ 
+  scale:1,
+},0).to("#shadowsection .bubblescroll",1, { 
+  opacity:1,
+},0).to("#shadowsection .bubblescroll",0.5, { 
+  opacity:0,
+},1);
 
 ScrollTrigger.create({
   animation: sec_1,
@@ -153,7 +167,21 @@ sec_2.to("#section1-3 .mask4",1, {
 },0).from("#section1-3 .scrollToExplore",1, {
   opacity:0,
   duration: 1,
-},0);
+},0).fromTo("#shadowsection .sfase5",1,{
+  scale:1,
+}, { 
+  scale:0,
+},0).to("#shadowsection .sfase4",1, { 
+  scale:1,
+},0).fromTo("#shadowsection .scrollbar",1,{
+  width:"5%"
+}, { 
+  width:"25%"
+},0).to("#shadowsection .bubblescroll",1, { 
+  opacity:1,
+},0).to("#shadowsection .bubblescroll",0.5, { 
+  opacity:0,
+},1);
 
 ScrollTrigger.create({
   animation: sec_2,
@@ -193,13 +221,40 @@ sec_2_2.fromTo("#section1-3 .animkanan",1, {
 ScrollTrigger.create({
   animation: sec_2_2,
   trigger: "#section1-2",
-  // markers:true,
-  start: '2700px center',
-  end: '2700px center',
+  markers:true,
+  start: '2800px center',
+  end: '2800px center',
   toggleActions: "play none none reverse",
   onEnter: stopscroll,
   onLeaveBack: stopscroll,
   // onEnterBack: self => self.disable()
+});
+
+const sec_2to3 = gsap.timeline();
+
+sec_2to3.fromTo("#shadowsection .sfase4",1,{
+  scale:1,
+}, { 
+  scale:0,
+},0).to("#shadowsection .sfase3",1, { 
+  scale:1,
+},0).fromTo("#shadowsection .scrollbar",1,{
+  width:"25%"
+}, { 
+  width:"50%"
+},0).to("#shadowsection .bubblescroll",1, { 
+  opacity:1,
+},0).to("#shadowsection .bubblescroll",0.5, { 
+  opacity:0,
+},1);
+
+ScrollTrigger.create({
+  animation: sec_2to3,
+  trigger: "#section1-2",
+  // markers:true,
+  start: '4100px center',
+  end: '4100px center',
+  toggleActions: "play none none reverse",
 });
 
 const sec_3 = gsap.timeline();
@@ -302,7 +357,21 @@ sec_4.fromTo("#section2-1 .gambarsurat", 1, {
 },{
   x:"0",
   rotation:0,
-},0);
+},0).fromTo("#shadowsection .sfase3",1,{
+  scale:1,
+}, { 
+  scale:0,
+},0).to("#shadowsection .sfase2",1, { 
+  scale:1,
+},0).fromTo("#shadowsection .scrollbar",1,{
+  width:"50%"
+}, { 
+  width:"75%"
+},0).to("#shadowsection .bubblescroll",1, { 
+  opacity:1,
+},0).to("#shadowsection .bubblescroll",0.5, { 
+  opacity:0,
+},1);
 
 ScrollTrigger.create({
   animation: sec_4,
@@ -323,7 +392,21 @@ sec_4_2.fromTo("#section2-1 .foto-surat1", 1, {
   x:130,
   y:-100,
   rotation:10,
-},0).fromTo("#section2-1 .foto-surat2", 1, {
+},0).fromTo("#shadowsection .sfase3",1,{
+  scale:1,
+}, { 
+  scale:0,
+},0).to("#shadowsection .sfase2",1, { 
+  scale:1,
+},0).fromTo("#shadowsection .scrollbar",1,{
+  width:"75%"
+}, { 
+  width:"100%"
+},0).to("#shadowsection .bubblescroll",1, { 
+  opacity:1,
+},0).to("#shadowsection .bubblescroll",0.5, { 
+  opacity:0,
+},1).fromTo("#section2-1 .foto-surat2", 1, {
   scale:0,
   transformOrigin:"top left",
 },{

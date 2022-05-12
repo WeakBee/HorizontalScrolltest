@@ -221,7 +221,7 @@ sec_2_2.fromTo("#section1-3 .animkanan",1, {
 ScrollTrigger.create({
   animation: sec_2_2,
   trigger: "#section1-2",
-  markers:true,
+  // markers:true,
   start: '2800px center',
   end: '2800px center',
   toggleActions: "play none none reverse",

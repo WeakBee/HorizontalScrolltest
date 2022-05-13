@@ -311,6 +311,10 @@ sec_3_2.to("#section1-4 .changetext5", 1.5, {
   x: "-100vh" 
 },0).to("#section1-4 .instruction", 1, { 
   opacity: 1 
+},1).fromTo("#section1-4 .penutupps", 1, { 
+  display:"block",
+},{
+  display:"none",
 },1);
 
 ScrollTrigger.create({

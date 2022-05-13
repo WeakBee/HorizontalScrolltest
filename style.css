@@ -361,6 +361,11 @@
   top: 1vh;
   font-weight: 700;
 }
+#section1-4 .penutupps{
+  position: absolute;
+  width: 70vh;
+  height: 18vh;
+}
 #section1-4 .people-schedule{
   background-color: var(--warna2);
   width: 30vh;

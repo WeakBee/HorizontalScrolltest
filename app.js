@@ -41,7 +41,7 @@ ScrollTrigger.create({
   trigger: ".ccontainer",
   pin: true,
   scrub: 1,
-  end: () => "+=7000" 
+  end: () => "+=7300" 
 });
 
 function stopscroll() {
@@ -405,11 +405,7 @@ sec_4.fromTo("#section2-1 .gambarsurat", 1, {
   width:"50%"
 }, { 
   width:"75%"
-},0).to("#shadowsection .bubblescroll",1, { 
-  opacity:1,
-},1).to("#shadowsection .bubblescroll",0.5, { 
-  opacity:0,
-},2);
+},0);
 
 ScrollTrigger.create({
   animation: sec_4,
@@ -464,8 +460,8 @@ ScrollTrigger.create({
   animation: sec_4_2,
   trigger: "#section1-2",
   // markers:true,
-  start: "7000px center",
-  end: "7000px center",
+  start: "7300px center",
+  end: "7300px center",
   toggleActions: "play none none reverse",
   onEnter: stopscroll,
   onLeaveBack: stopscroll,

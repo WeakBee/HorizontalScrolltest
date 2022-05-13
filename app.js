@@ -338,7 +338,11 @@ sec_4_1.fromTo("#section2-1 .notif", 1,{
 },{
   scale:1,
   transformOrigin:"top left",
-},1);
+},1).to("#shadowsection .bubblescroll",1, { 
+  opacity:1,
+},1).to("#shadowsection .bubblescroll",0.5, { 
+  opacity:0,
+},2);
 
 ScrollTrigger.create({
   animation: sec_4_1,
@@ -397,11 +401,7 @@ sec_4.fromTo("#section2-1 .gambarsurat", 1, {
   width:"50%"
 }, { 
   width:"75%"
-},0).to("#shadowsection .bubblescroll",1, { 
-  opacity:1,
-},0).to("#shadowsection .bubblescroll",0.5, { 
-  opacity:0,
-},1);
+},0);
 
 ScrollTrigger.create({
   animation: sec_4,

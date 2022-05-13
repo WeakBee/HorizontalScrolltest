@@ -79,16 +79,22 @@ sec_1.to("#section1-2 .mask4",0.5, {
   opacity:0,
 },{
   opacity:1,
+},0).to("#shadowsection .bscroll5,#shadowsection .bscroll4,#shadowsection .bscroll3,#shadowsection .bscroll2",1,{
+  display:"none",
+},0).fromTo("#shadowsection .bscroll1",1,{
+  display:"none",
+},{
+  display:"block",
 },0).fromTo("#shadowsection .scrollbar",1,{
   width:"0",
 }, { 
   width:"5%"
-},0).to("#shadowsection .sfase4",1, { 
-  scale:0,
+},0).to("#shadowsection .sfase1,#shadowsection .sfase2,#shadowsection .sfase3,#shadowsection .sfase4",1,{
+  opacity:0,
 },0).fromTo("#shadowsection .sfase5",1,{
-  scale:0,
+  opacity:0,
 } ,{ 
-  scale:1,
+  opacity:1,
 },0).to("#shadowsection .bubblescroll",1, { 
   opacity:1,
 },0).to("#shadowsection .bubblescroll",0.5, { 
@@ -167,12 +173,20 @@ sec_2.to("#section1-3 .mask4",1, {
 },0).from("#section1-3 .scrollToExplore",1, {
   opacity:0,
   duration: 1,
+},0).fromTo("#shadowsection .bscroll5,#shadowsection .bscroll4,#shadowsection .bscroll3,#shadowsection .bscroll1",1,{
+  display:"block",
+},{
+  display:"none",
+},0).to("#shadowsection .bscroll2",0.1,{
+  display:"block",
 },0).fromTo("#shadowsection .sfase5",1,{
-  scale:1,
+  opacity:1,
 }, { 
-  scale:0,
-},0).to("#shadowsection .sfase4",1, { 
-  scale:1,
+  opacity:0,
+},0).fromTo("#shadowsection .sfase4",1,{
+  opacity:0,
+}, { 
+  opacity:1,
 },0).fromTo("#shadowsection .scrollbar",1,{
   width:"5%"
 }, { 
@@ -232,12 +246,20 @@ ScrollTrigger.create({
 
 const sec_2to3 = gsap.timeline();
 
-sec_2to3.fromTo("#shadowsection .sfase4",1,{
-  scale:1,
+sec_2to3.fromTo("#shadowsection .bscroll5,#shadowsection .bscroll4,#shadowsection .bscroll2,#shadowsection .bscroll1",1,{
+  display:"block",
+},{
+  display:"none",
+},0).to("#shadowsection .bscroll3",0.1,{
+  display:"block",
+},0).fromTo("#shadowsection .sfase4",1,{
+  opacity:1,
 }, { 
-  scale:0,
-},0).to("#shadowsection .sfase3",1, { 
-  scale:1,
+  opacity:0,
+},0).fromTo("#shadowsection .sfase3",1, {
+  opacity:0,
+}, { 
+  opacity:1,
 },0).fromTo("#shadowsection .scrollbar",1,{
   width:"25%"
 }, { 
@@ -357,12 +379,20 @@ sec_4.fromTo("#section2-1 .gambarsurat", 1, {
 },{
   x:"0",
   rotation:0,
+},0).fromTo("#shadowsection .bscroll5,#shadowsection .bscroll3,#shadowsection .bscroll2,#shadowsection .bscroll1",1,{
+  display:"block",
+},{
+  display:"none",
+},0).to("#shadowsection .bscroll4",0.1,{
+  display:"block",
 },0).fromTo("#shadowsection .sfase3",1,{
-  scale:1,
+  opacity:1,
 }, { 
-  scale:0,
-},0).to("#shadowsection .sfase2",1, { 
-  scale:1,
+  opacity:0,
+},0).fromTo("#shadowsection .sfase2",1,{
+  opacity:0,
+}, { 
+  opacity:1,
 },0).fromTo("#shadowsection .scrollbar",1,{
   width:"50%"
 }, { 
@@ -392,12 +422,20 @@ sec_4_2.fromTo("#section2-1 .foto-surat1", 1, {
   x:130,
   y:-100,
   rotation:10,
-},0).fromTo("#shadowsection .sfase3",1,{
-  scale:1,
+},0).fromTo("#shadowsection .bscroll3,#shadowsection .bscroll4,#shadowsection .bscroll2,#shadowsection .bscroll1",1,{
+  display:"block",
+},{
+  display:"none",
+},0).to("#shadowsection .bscroll5",0.1,{
+  display:"block",
+},0).fromTo("#shadowsection .sfase2",1,{
+  opacity:1,
 }, { 
-  scale:0,
-},0).to("#shadowsection .sfase2",1, { 
-  scale:1,
+  opacity:0,
+},0).fromTo("#shadowsection .sfase1",1, {
+  opacity:0,
+}, { 
+  opacity:1,
 },0).fromTo("#shadowsection .scrollbar",1,{
   width:"75%"
 }, { 

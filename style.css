@@ -75,10 +75,10 @@
 #shadowsection .scrollfase{
   position: absolute;
   width: 12vh;
-  transform: scale(0);
-  transform-origin: left right;
+  opacity: 0;
 }
 #shadowsection .bubblescroll {
+  display: none;
   opacity: 0;
   width: 14vh;
   margin-left: 11vh;
@@ -86,21 +86,6 @@
 }
 #shadowsection .circlebar:hover .bubblescroll {
   opacity: 1 !important;
-}
-#shadowsection .sfase5{
-  z-index: 1;
-}
-#shadowsection .sfase4{
-  z-index: 2;
-}
-#shadowsection .sfase3{
-  z-index: 3;
-}
-#shadowsection .sfase2{
-  z-index: 4;
-}
-#shadowsection .sfase1{
-  z-index: 5;
 }
 /* Shadow Container */
 

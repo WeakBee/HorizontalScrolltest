@@ -193,9 +193,9 @@ sec_2.to("#section1-3 .mask4",1, {
   width:"25%"
 },0).to("#shadowsection .bubblescroll",1, { 
   opacity:1,
-},0).to("#shadowsection .bubblescroll",0.5, { 
+},1).to("#shadowsection .bubblescroll",0.5, { 
   opacity:0,
-},1);
+},2);
 
 ScrollTrigger.create({
   animation: sec_2,
@@ -266,9 +266,9 @@ sec_2to3.fromTo("#shadowsection .bscroll5,#shadowsection .bscroll4,#shadowsectio
   width:"50%"
 },0).to("#shadowsection .bubblescroll",1, { 
   opacity:1,
-},0).to("#shadowsection .bubblescroll",0.5, { 
+},1).to("#shadowsection .bubblescroll",0.5, { 
   opacity:0,
-},1);
+},2);
 
 ScrollTrigger.create({
   animation: sec_2to3,
@@ -405,7 +405,11 @@ sec_4.fromTo("#section2-1 .gambarsurat", 1, {
   width:"50%"
 }, { 
   width:"75%"
-},0);
+},0).to("#shadowsection .bubblescroll",1, { 
+  opacity:1,
+},1).to("#shadowsection .bubblescroll",0.5, { 
+  opacity:0,
+},2);
 
 ScrollTrigger.create({
   animation: sec_4,
@@ -444,17 +448,17 @@ sec_4_2.fromTo("#section2-1 .foto-surat1", 1, {
   width:"75%"
 }, { 
   width:"100%"
-},0).to("#shadowsection .bubblescroll",1, { 
-  opacity:1,
-},0).to("#shadowsection .bubblescroll",0.5, { 
-  opacity:0,
-},1).fromTo("#section2-1 .foto-surat2", 1, {
+},0).fromTo("#section2-1 .foto-surat2", 1, {
   scale:0,
   transformOrigin:"top left",
 },{
   scale:1,
   transformOrigin:"top left",
-},1);
+},1).to("#shadowsection .bubblescroll",1, { 
+  opacity:1,
+},1).to("#shadowsection .bubblescroll",0.5, { 
+  opacity:0,
+},2);
 
 ScrollTrigger.create({
   animation: sec_4_2,

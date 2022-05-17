@@ -294,8 +294,8 @@ ScrollTrigger.create({
   animation: sec_3,
   trigger: "#section1-2",
   // markers:true,
-  start: '4300px center',
-  end: '4300px center',
+  start: '4500px center',
+  end: '4500px center',
   toggleActions: "play none none reverse",
   onEnter: stopscroll2,
 });
@@ -374,8 +374,8 @@ ScrollTrigger.create({
   trigger: "#section1-2",
   // markers:true,
   toggleActions: "play none none reverse",
-  start: "6300px center",
-  end: "6300px center",
+  start: "6400px center",
+  end: "6400px center",
   onEnter: stopscroll,
 });
 

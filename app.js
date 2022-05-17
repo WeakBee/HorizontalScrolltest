@@ -63,6 +63,39 @@ function stopscroll2() {
   }, 3000);
 }
 
+const sec_1_2 = gsap.timeline();
+
+sec_1_2.to("#section1-2 .quaimg",1, {
+  scale:0
+},0).fromTo("#section1-2 .textanim",1, {
+  x:"0",
+  autoAlpha:1,
+},{
+  autoAlpha:0,
+  x:"7vh",
+},0).fromTo("#section1-2 .quacheck",1, {
+  scale:0
+},{
+  scale:1
+},1).fromTo("#section1-2 .textanim2",1, {
+  opacity:0,
+  x:"7vh",
+},{
+  opacity:1,
+  x:"0",
+},1);
+
+ScrollTrigger.create({
+  animation: sec_1_2,
+  trigger: "#section1-2",
+  // markers:true,
+  start: '700px center',
+  end: '700px center',
+  onEnter: stopscroll,
+  onLeaveBack: stopscroll,
+  toggleActions: "restart none none reverse"
+});
+
 const sec_1 = gsap.timeline();
 
 sec_1.to("#section1-2 .mask4",0.5, {
@@ -108,39 +141,6 @@ ScrollTrigger.create({
   // markers:true,
   start: '100px center',
   end: '100px center',
-  toggleActions: "restart none none reverse"
-});
-
-const sec_1_2 = gsap.timeline();
-
-sec_1_2.to("#section1-2 .quaimg",1, {
-  scale:0
-},0).fromTo("#section1-2 .textanim",1, {
-  x:"0",
-  autoAlpha:1,
-},{
-  autoAlpha:0,
-  x:"7vh",
-},0).fromTo("#section1-2 .quacheck",1, {
-  scale:0
-},{
-  scale:1
-},1).fromTo("#section1-2 .textanim2",1, {
-  opacity:0,
-  x:"7vh",
-},{
-  opacity:1,
-  x:"0",
-},1);
-
-ScrollTrigger.create({
-  animation: sec_1_2,
-  trigger: "#section1-2",
-  // markers:true,
-  start: '700px center',
-  end: '700px center',
-  onEnter: stopscroll,
-  onLeaveBack: stopscroll,
   toggleActions: "restart none none reverse"
 });
 

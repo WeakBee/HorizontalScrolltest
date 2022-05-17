@@ -1,3 +1,6 @@
+$('#process').click(function() {
+  location.reload();
+});
 gsap.registerPlugin(ScrollTrigger);
 // SECTION 1-2
 let sections = gsap.utils.toArray(".panel");
@@ -67,16 +70,16 @@ sec_1.to("#section1-2 .mask4",0.5, {
   transformOrigin: "top bottom"
 },0).to("#section1-2 .orang",1, {
   scale:1,
-  duration:3,
-},0).from("#section1-2 .textanim",0.5, {
-  opacity:0,
+},0).fromTo("#section1-2 .textanim",0.5,{
+  autoAlpha: 0,
   x:"7vh",
-  lazy: false,
+}, {
+  autoAlpha:1,
+  x:"0",
 },0).from("#section1-2 .qualification",0.5, {
   opacity:0,
   x:"-10vh",
   stagger:0.1,
-  lazy: false,
 },0).fromTo("#section1-2 .scrollToExplore",1, {
   opacity:0,
 },{
@@ -105,7 +108,7 @@ ScrollTrigger.create({
   // markers:true,
   start: '100px center',
   end: '100px center',
-  toggleActions: "play none none reverse"
+  toggleActions: "restart none none reverse"
 });
 
 const sec_1_2 = gsap.timeline();
@@ -114,8 +117,9 @@ sec_1_2.to("#section1-2 .quaimg",1, {
   scale:0
 },0).fromTo("#section1-2 .textanim",1, {
   x:"0",
+  autoAlpha:1,
 },{
-  opacity:0,
+  autoAlpha:0,
   x:"7vh",
 },0).fromTo("#section1-2 .quacheck",1, {
   scale:0
@@ -137,7 +141,7 @@ ScrollTrigger.create({
   end: '700px center',
   onEnter: stopscroll,
   onLeaveBack: stopscroll,
-  toggleActions: "play none none reverse"
+  toggleActions: "restart none none reverse"
 });
 
 const sec_2 = gsap.timeline();
@@ -157,19 +161,14 @@ sec_2.to("#section1-3 .mask4",1, {
 },0).fromTo("#section1-3 .animkanan",1, {
   opacity:0,
   x:"-10vh",
-  duration:1,
 },{
   opacity:1,
   x:"0",
-  stagger:0.1,
-  duration:1,
 },0).from("#section1-3 .animkiri",1, {
   opacity:0,
   x:"10vh",
-  duration:1,
 },0).from("#section1-3 .scrollToExplore",1, {
   opacity:0,
-  duration: 1,
 },0).fromTo("#shadowsection .sfase5",1,{
   opacity:1,
 }, { 
@@ -202,34 +201,35 @@ ScrollTrigger.create({
   // markers:true,
   start: '1800px center',
   end: '1800px center',
-  toggleActions: "play none none reverse"
+  toggleActions: "restart none none reverse"
 });
 
 const sec_2_2 = gsap.timeline();
 
 sec_2_2.fromTo("#section1-3 .animkanan",1, {
   x:"0vh",
+  autoAlpha:1,
 },{
-  opacity:0,
+  autoAlpha:0,
   x:"-13vh",
 },0).fromTo("#section1-3 .animkiri",1, {
   x:"0",
+  autoAlpha:1,
 },{
-  opacity:0,
+  autoAlpha:0,
   x:"10vh",
 },0).fromTo("#section1-3 .textanim",1, {
   x:"0",
+  autoAlpha:1,
 },{
-  opacity:0,
+  autoAlpha:0,
   x:"3vh",
 },0).from("#section1-3 .animkanan_after",1, {
   opacity:0,
   x:"-13vh",
-  lazy: false,
 },1).from("#section1-3 .animkiri_after",1, {
   opacity:0,
   x:"10vh",
-  lazy: false,
 },1);
 ScrollTrigger.create({
   animation: sec_2_2,
@@ -237,7 +237,7 @@ ScrollTrigger.create({
   // markers:true,
   start: '2800px center',
   end: '2800px center',
-  toggleActions: "play none none reverse",
+  toggleActions: "restart none none reverse",
   onEnter: stopscroll,
   onLeaveBack: stopscroll
 });
@@ -276,7 +276,7 @@ ScrollTrigger.create({
   // markers:true,
   start: '4100px center',
   end: '4100px center',
-  toggleActions: "play none none reverse",
+  toggleActions: "restart none none reverse",
 });
 
 const sec_3 = gsap.timeline();
@@ -296,7 +296,7 @@ ScrollTrigger.create({
   // markers:true,
   start: '4500px center',
   end: '4500px center',
-  toggleActions: "play none none reverse",
+  toggleActions: "restart none none reverse",
   onEnter: stopscroll2,
 });
 
@@ -323,17 +323,14 @@ ScrollTrigger.create({
   // markers:true,
   start: '5000px center',
   end: '5000px center',
-  toggleActions: "play none none reverse",
+  toggleActions:"restart none none reverse",
   onEnter: stopscroll,
   onLeaveBack: stopscroll,
 });
 
 const sec_4_1 = gsap.timeline();
 
-sec_4_1.fromTo("#section2-1 .notif", 1,{
-  scale:1,
-  transformOrigin:"top right",
-},{
+sec_4_1.to("#section2-1 .notiftutup", 1,{
   scale:0,
   transformOrigin:"top right",
 },0).fromTo("#section2-1 .foto-surat1", 1, {
@@ -354,7 +351,7 @@ ScrollTrigger.create({
   // markers:true,
   start: "6800px center",
   end: "6800px center",
-  toggleActions: "play none none reverse",
+  toggleActions: "restart none none reverse",
   onEnter: stopscroll,
   onLeaveBack: stopscroll,
 });
@@ -363,20 +360,20 @@ const sec_41 = gsap.timeline();
 
 sec_41.fromTo("#section2-1 .notif", 0.5, {
   scale:0,
-  transformOrigin:"top right",
 },{
   scale:1,
   transformOrigin:"top right",
-},1);
+},0);
 
 ScrollTrigger.create({
   animation: sec_41,
   trigger: "#section1-2",
   // markers:true,
-  toggleActions: "play none none reverse",
   start: "6400px center",
   end: "6400px center",
+  toggleActions: "restart none none reverse",
   onEnter: stopscroll,
+  onLeaveBack: stopscroll,
 });
 
 const sec_4 = gsap.timeline();
@@ -413,7 +410,7 @@ ScrollTrigger.create({
   animation: sec_4,
   trigger: "#section1-2",
   // markers:true,
-  toggleActions: "play none none reverse",
+  toggleActions: "restart none none reverse",
   start: "6000px center",
   end: "6000px center",
 });
@@ -466,7 +463,7 @@ ScrollTrigger.create({
   // markers:true,
   start: "7300px center",
   end: "7300px center",
-  toggleActions: "play none none reverse",
+  toggleActions: "restart none none reverse",
   onEnter: stopscroll,
   onLeaveBack: stopscroll,
 });

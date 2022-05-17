@@ -579,7 +579,10 @@
 #section2-1 .gambarsurat{
   width: 557px;
 }
-
+#section2-1 .notiftutup{
+  position: absolute;
+  z-index: 2;
+}
 #section2-1 .notif{
   position: absolute;
   z-index: 2;

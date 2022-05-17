@@ -330,7 +330,7 @@ ScrollTrigger.create({
 
 const sec_4_1 = gsap.timeline();
 
-sec_4_1.to("#section2-1 .notiftutup", 1,{
+sec_4_1.to("#section2-1 .notiftutup", .5,{
   scale:0,
   transformOrigin:"top right",
 },0).fromTo("#section2-1 .foto-surat1", 1, {

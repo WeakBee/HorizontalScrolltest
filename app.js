@@ -44,12 +44,14 @@ ScrollTrigger.create({
   end: () => "+=7300" 
 });
 
+// STOP SCROLL
 function stopscroll() {
   $('body').addClass('stop-scrolling')
   setTimeout(function() {
     $('body').removeClass('stop-scrolling');
   }, 2000);
 }
+// STOP SCROLL
 
 function stopscroll2() {
   $('body').addClass('stop-scrolling')
@@ -79,12 +81,6 @@ sec_1.to("#section1-2 .mask4",0.5, {
   opacity:0,
 },{
   opacity:1,
-},0).to("#shadowsection .bscroll5,#shadowsection .bscroll4,#shadowsection .bscroll3,#shadowsection .bscroll2",1,{
-  display:"none",
-},0).fromTo("#shadowsection .bscroll1",1,{
-  display:"none",
-},{
-  display:"block",
 },0).fromTo("#shadowsection .scrollbar",1,{
   width:"0",
 }, { 
@@ -95,6 +91,8 @@ sec_1.to("#section1-2 .mask4",0.5, {
   opacity:0,
 } ,{ 
   opacity:1,
+},0).to("#shadowsection .bscroll2,#shadowsection .bscroll3,#shadowsection .bscroll4,#shadowsection .bscroll5",0.5, { 
+  scale:0,
 },0).to("#shadowsection .bubblescroll",1, { 
   opacity:1,
 },0).to("#shadowsection .bubblescroll",0.5, { 
@@ -139,7 +137,6 @@ ScrollTrigger.create({
   end: '700px center',
   onEnter: stopscroll,
   onLeaveBack: stopscroll,
-  // onEnterBack: self => self.disable(),
   toggleActions: "play none none reverse"
 });
 
@@ -173,12 +170,6 @@ sec_2.to("#section1-3 .mask4",1, {
 },0).from("#section1-3 .scrollToExplore",1, {
   opacity:0,
   duration: 1,
-},0).fromTo("#shadowsection .bscroll5,#shadowsection .bscroll4,#shadowsection .bscroll3,#shadowsection .bscroll1",1,{
-  display:"block",
-},{
-  display:"none",
-},0).to("#shadowsection .bscroll2",0.1,{
-  display:"block",
 },0).fromTo("#shadowsection .sfase5",1,{
   opacity:1,
 }, { 
@@ -191,6 +182,14 @@ sec_2.to("#section1-3 .mask4",1, {
   width:"5%"
 }, { 
   width:"25%"
+},0).fromTo("#shadowsection .bscroll2",0.5,{
+  scale:0,
+},{ 
+  scale:1,
+},0).fromTo("#shadowsection .bscroll1",0.5,{
+  scale:1,
+}, { 
+  scale:0,
 },0).to("#shadowsection .bubblescroll",1, { 
   opacity:1,
 },1).to("#shadowsection .bubblescroll",0.5, { 
@@ -240,19 +239,12 @@ ScrollTrigger.create({
   end: '2800px center',
   toggleActions: "play none none reverse",
   onEnter: stopscroll,
-  onLeaveBack: stopscroll,
-  // onEnterBack: self => self.disable()
+  onLeaveBack: stopscroll
 });
 
 const sec_2to3 = gsap.timeline();
 
-sec_2to3.fromTo("#shadowsection .bscroll5,#shadowsection .bscroll4,#shadowsection .bscroll2,#shadowsection .bscroll1",1,{
-  display:"block",
-},{
-  display:"none",
-},0).to("#shadowsection .bscroll3",0.1,{
-  display:"block",
-},0).fromTo("#shadowsection .sfase4",1,{
+sec_2to3.fromTo("#shadowsection .sfase4",1,{
   opacity:1,
 }, { 
   opacity:0,
@@ -264,6 +256,14 @@ sec_2to3.fromTo("#shadowsection .bscroll5,#shadowsection .bscroll4,#shadowsectio
   width:"25%"
 }, { 
   width:"50%"
+},0).fromTo("#shadowsection .bscroll3",0.5,{
+  scale:0,
+},{ 
+  scale:1,
+},0).fromTo("#shadowsection .bscroll2",0.5,{
+  scale:1,
+}, { 
+  scale:0,
 },0).to("#shadowsection .bubblescroll",1, { 
   opacity:1,
 },1).to("#shadowsection .bubblescroll",0.5, { 
@@ -387,12 +387,6 @@ sec_4.fromTo("#section2-1 .gambarsurat", 1, {
 },{
   x:"0",
   rotation:0,
-},0).fromTo("#shadowsection .bscroll5,#shadowsection .bscroll3,#shadowsection .bscroll2,#shadowsection .bscroll1",1,{
-  display:"block",
-},{
-  display:"none",
-},0).to("#shadowsection .bscroll4",0.1,{
-  display:"block",
 },0).fromTo("#shadowsection .sfase3",1,{
   opacity:1,
 }, { 
@@ -401,6 +395,14 @@ sec_4.fromTo("#section2-1 .gambarsurat", 1, {
   opacity:0,
 }, { 
   opacity:1,
+},0).fromTo("#shadowsection .bscroll4",0.5,{
+  scale:0,
+},{ 
+  scale:1,
+},0).fromTo("#shadowsection .bscroll3",0.5,{
+  scale:1,
+}, { 
+  scale:0,
 },0).fromTo("#shadowsection .scrollbar",1,{
   width:"50%"
 }, { 
@@ -426,12 +428,6 @@ sec_4_2.fromTo("#section2-1 .foto-surat1", 1, {
   x:130,
   y:-100,
   rotation:10,
-},0).fromTo("#shadowsection .bscroll3,#shadowsection .bscroll4,#shadowsection .bscroll2,#shadowsection .bscroll1",1,{
-  display:"block",
-},{
-  display:"none",
-},0).to("#shadowsection .bscroll5",0.1,{
-  display:"block",
 },0).fromTo("#shadowsection .sfase2",1,{
   opacity:1,
 }, { 
@@ -444,6 +440,14 @@ sec_4_2.fromTo("#section2-1 .foto-surat1", 1, {
   width:"75%"
 }, { 
   width:"100%"
+},0).fromTo("#shadowsection .bscroll5",0.5,{
+  scale:0,
+},{ 
+  scale:1,
+},0).fromTo("#shadowsection .bscroll4",0.5,{
+  scale:1,
+}, { 
+  scale:0,
 },0).fromTo("#section2-1 .foto-surat2", 1, {
   scale:0,
   transformOrigin:"top left",

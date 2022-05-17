@@ -484,8 +484,17 @@
   position: absolute;
   opacity: 0;
 }
+#section1-4 .hilangpjud{
+  opacity: 0;
+}
 #section1-4 .hilangp{
   opacity: 0;
+}
+#section1-4 .hilangp2{
+  opacity: 0;
+}
+#section1-4 .absol{
+  position: absolute;
 }
 #section1-4 .hilang1{
   position:static;
@@ -504,7 +513,7 @@
   font-weight: 600;
   font-size: 1.5vh;
 }
-#section1-4 .isikanan p:nth-child(2) {
+#section1-4 .isikanan p:nth-child(2) , .isikanan p:nth-child(3) {
   font-weight: 400;
   font-size: 1.5vh;
   color: #4A5568;

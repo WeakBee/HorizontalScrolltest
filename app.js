@@ -474,24 +474,28 @@ $("#section1-4 .people-schedule").click(function () {
     if ($(this).hasClass("peoples1")) {
       $(".peoples1").hide();
       $(".onclickcontent1 .hilang1").addClass("muncul");
-      $(".onclickcontent1 p").removeClass("hilangp");
+      $(".onclickcontent1 .hilangpjud").removeClass("hilangpjud");
+      $(".onclickcontent1 .hilangp").removeClass("hilangp");
     } else if ($(this).hasClass("peoples2")) {
       $(".peoples2").hide();
       $(".onclickcontent1 .hilang2").addClass("muncul");
-      $(".onclickcontent1 p").removeClass("hilangp");
+      $(".onclickcontent1 .hilangpjud").removeClass("hilangpjud");
+      $(".onclickcontent1 .hilangp2").removeClass("hilangp2");
     }
     $toggle = 1;
   } else if ($toggle == 1) {
     if ($(this).hasClass("peoples1")) {
       $(".peoples1").hide();
       $(".onclickcontent2 .hilang1").addClass("muncul");
-      $(".onclickcontent2 p").removeClass("hilangp");
+      $(".onclickcontent2 .hilangpjud").removeClass("hilangpjud");
+      $(".onclickcontent2 .hilangp").removeClass("hilangp");
       $(".instruction").hide();
       $(".bawah").show();
     } else if ($(this).hasClass("peoples2")) {
       $(".peoples2").hide();
       $(".onclickcontent2 .hilang2").addClass("muncul");
-      $(".onclickcontent2 p").removeClass("hilangp");
+      $(".onclickcontent2 .hilangpjud").removeClass("hilangpjud");
+      $(".onclickcontent2 .hilangp2").removeClass("hilangp2");
       $(".instruction").hide();
       $(".bawah").show();
     } 

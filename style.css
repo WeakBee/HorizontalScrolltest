@@ -591,22 +591,26 @@
 #section2-1 .notiftutup{
   position: absolute;
   z-index: 2;
-}
-#section2-1 .notif{
-  position: absolute;
-  z-index: 2;
+  width: auto;
+  height: auto;
 }
 #section2-1 .notif1{
-  width: 183px;
   transform: translate(-50px,200px);
 }
+#section2-1 .notif1 .notif{
+  width: 183px;
+}
 #section2-1 .notif2{
-  width: 136px;
   transform: translate(270px,60px);
 }
+#section2-1 .notif2 .notif{
+  width: 136px;
+}
 #section2-1 .notif3{
-  width: 118px;
   transform: translate(420px,280px);
+}
+#section2-1 .notif3 .notif{
+  width: 118px;
 }
 #section2-1 .fsurat{
   position: absolute;

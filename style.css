@@ -75,16 +75,11 @@
 #shadowsection .scrollfase{
   position: absolute;
   width: 12vh;
-  opacity: 0;
 }
 #shadowsection .bubblescroll {
-  opacity: 0;
   width: 14vh;
   margin-left: 11vh;
   margin-top: -12vh;
-}
-#shadowsection .circlebar:hover .bubblescroll {
-  opacity: 1 !important;
 }
 /* Shadow Container */
 
